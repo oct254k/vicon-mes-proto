@@ -67,6 +67,7 @@ export default function YardZonePage() {
       <PageHeader
         title="야적장"
         accent="구역 마스터"
+        description="야적장 구역(A1~C5)의 마스터 데이터를 관리합니다. 구역별 용량, 현재 적재량, 상태를 확인하고 구역을 추가/수정할 수 있습니다."
         nodeRef="SCR-YRD-001"
         status="ONLINE"
       />

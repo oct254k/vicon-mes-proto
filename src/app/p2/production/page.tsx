@@ -76,6 +76,7 @@ export default function P2ProductionPage() {
         title="2공정 TG"
         accent="생산 실적"
         nodeRef="SCR-P2-004"
+        description="TG 공정의 생산 실적을 등록합니다. 제품종류, 수량(m²)을 입력하고 실적 취소/정정이 가능합니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

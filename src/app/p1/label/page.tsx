@@ -45,6 +45,7 @@ export default function P1LabelPage() {
         accent="인쇄"
         nodeRef="SCR-P1-003"
         status="ONLINE"
+        description="신선 공정에서 생산된 철선 LOT의 바코드 라벨을 검색하고 인쇄합니다."
       />
 
       {/* LOT Search */}

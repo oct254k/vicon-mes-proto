@@ -49,6 +49,7 @@ export default function RMRegisterPage() {
         accent="입고 등록"
         nodeRef="SCR-RM-001"
         status="CALIBRATED"
+        description="원자재 입고 정보를 등록합니다. 공급업체, 종류, 규격, 수량, 중량을 입력하면 LOT 번호가 자동 채번됩니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

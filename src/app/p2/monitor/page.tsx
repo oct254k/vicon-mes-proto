@@ -71,6 +71,7 @@ export default function P2MonitorPage() {
         accent="가동 모니터링"
         nodeRef="SCR-P2-001"
         status="LIVE"
+        description="TG기 7대의 실시간 가동 상태를 모니터링합니다. 설비별 생산량, 가동률, 정지 상태를 확인할 수 있습니다."
       />
 
       {/* Auto-refresh indicator */}

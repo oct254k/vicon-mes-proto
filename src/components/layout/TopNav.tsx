@@ -7,7 +7,7 @@ export function TopNav() {
   return (
     <nav className="fixed top-0 flex justify-between items-center w-full px-10 h-16 z-50 bg-surface border-b border-surface-container-highest/20">
       <div className="flex items-center gap-8">
-        <div className="flex items-center gap-3">
+        <Link href="/dashboard" className="flex items-center gap-3">
           <Image
             src="/vicon_logo.png"
             alt="VICON Logo"
@@ -16,7 +16,7 @@ export function TopNav() {
             className="h-8 w-auto invert-0"
             priority
           />
-        </div>
+        </Link>
         <div className="hidden md:flex gap-6 font-headline font-bold tracking-tighter tabular-nums">
           <Link href="/dashboard" className="text-on-surface opacity-70 hover:opacity-100 hover:bg-surface-container-highest transition-colors duration-150 py-1 px-2">
             대시보드

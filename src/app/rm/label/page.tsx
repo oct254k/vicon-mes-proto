@@ -30,6 +30,7 @@ export default function RMLabelPage() {
         accent="라벨 발행"
         nodeRef="SCR-RM-002"
         status="CALIBRATED"
+        description="원자재 LOT 바코드 라벨을 검색하고 인쇄합니다. 라벨 훼손 시 사유를 입력하여 재발행할 수 있습니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

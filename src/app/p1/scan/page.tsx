@@ -44,6 +44,7 @@ export default function P1ScanPage() {
         accent="스캔"
         nodeRef="SCR-P1-001"
         status="ONLINE"
+        description="신선 공정에 투입할 원자재 LOT를 바코드 스캔하여 등록합니다. FIFO 순서 검증이 자동으로 수행됩니다."
       />
 
       {/* Scan Input Section */}

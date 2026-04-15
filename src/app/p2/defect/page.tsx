@@ -77,6 +77,7 @@ export default function P2DefectPage() {
         title="2공정 TG"
         accent="부적합 등록"
         nodeRef="SCR-P2-007"
+        description="TG 공정에서 발생한 부적합 사항을 등록합니다. 심각도별 분류와 사진 첨부가 가능합니다."
       />
 
       {/* Summary */}

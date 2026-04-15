@@ -49,6 +49,7 @@ export default function P3ParamsPage() {
         accent="파라미터 기록"
         nodeRef="P3-PRM-001"
         status="MONITORING"
+        description="성형 설비의 공정 파라미터(온도, 압력, 속도)를 기록합니다. 규격 이탈 시 경고가 표시됩니다."
       />
 
       {/* Equipment & Current Values */}

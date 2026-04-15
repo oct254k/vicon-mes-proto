@@ -74,6 +74,7 @@ export default function FinSleeperLabelPage() {
         accent="슬리퍼 라벨"
         nodeRef="FIN-SLB-001"
         status="PRINTER READY"
+        description="완성된 슬리퍼 제품의 라벨을 발행합니다. 치수, 중량, 콘크리트 등급, 용접 검사 결과가 포함됩니다."
       />
 
       {/* Search */}

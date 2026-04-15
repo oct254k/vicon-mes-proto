@@ -52,6 +52,7 @@ export default function BackwardTracePage() {
       <PageHeader
         title="역방향"
         accent="추적"
+        description="최종 제품 LOT가 어떤 원자재로부터 만들어졌는지 역방향으로 추적합니다. 품질 이슈 추적에 활용됩니다."
         nodeRef="SCR-TRC-003"
         status="ONLINE"
       />

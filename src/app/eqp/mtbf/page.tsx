@@ -70,6 +70,7 @@ export default function MtbfReportPage() {
       <PageHeader
         title="MTBF"
         accent="리포트"
+        description="설비별 MTBF(평균고장간격), MTTR(평균수리시간), 가용률을 분석합니다. 기간별 추세를 확인할 수 있습니다."
         nodeRef="SCR-EQP-004"
         status="ONLINE"
       />

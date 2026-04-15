@@ -55,6 +55,7 @@ export default function P1ProductionPage() {
         accent="실적"
         nodeRef="SCR-P1-002"
         status="ONLINE"
+        description="신선 공정의 생산 실적을 등록합니다. 철선 종류, 수량, 중량을 입력하고 LOT를 채번합니다. 실적 취소/정정도 가능합니다."
       />
 
       {/* Input LOT Info */}

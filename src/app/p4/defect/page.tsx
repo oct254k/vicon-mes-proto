@@ -47,6 +47,7 @@ export default function P4DefectPage() {
         accent="부적합 등록"
         nodeRef="P4-DEF-001"
         status="ACTIVE"
+        description="조립 공정에서 발생한 부적합 사항을 등록합니다. 용접 이음부 균열, 부품 정렬 불량 등을 기록합니다."
       />
 
       {/* Defect Input Form */}

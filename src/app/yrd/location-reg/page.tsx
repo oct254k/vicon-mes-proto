@@ -93,6 +93,7 @@ export default function LocationRegPage() {
       <PageHeader
         title="위치"
         accent="등록"
+        description="완성된 슬리퍼를 야적장 구역에 배치합니다. LOT를 스캔하고 배치할 구역을 선택합니다."
         nodeRef="SCR-YRD-002"
         status="FIELD"
       />

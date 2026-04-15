@@ -46,6 +46,7 @@ export default function P3DefectPage() {
         accent="부적합 등록"
         nodeRef="P3-DEF-001"
         status="ACTIVE"
+        description="성형 공정에서 발생한 부적합 사항을 등록합니다. 표면 균열, 치수 편차 등 유형별로 기록합니다."
       />
 
       {/* Defect Input Form */}

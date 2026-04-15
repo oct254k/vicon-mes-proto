@@ -88,6 +88,7 @@ export default function UserManagementPage() {
       <PageHeader
         title="사용자/권한"
         accent="관리"
+        description="시스템 사용자 계정과 역할별 권한을 관리합니다. 사용자 추가, 역할 변경, 권한 매트릭스를 설정합니다."
         nodeRef="SCR-COM-005"
         status="ADMIN"
       />

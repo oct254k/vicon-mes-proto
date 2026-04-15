@@ -41,6 +41,7 @@ export default function P4ProductionPage() {
         accent="생산 실적"
         nodeRef="P4-PRD-001"
         status="RECORDING"
+        description="조립 공정의 생산 실적을 등록합니다. 부품 조합 결과(합격/불합격)를 기록하고 실적을 관리합니다."
       />
 
       {/* Assembly Info */}

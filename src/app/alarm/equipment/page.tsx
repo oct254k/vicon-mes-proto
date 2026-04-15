@@ -92,6 +92,7 @@ export default function EquipmentAlarmPage() {
       <PageHeader
         title="설비"
         accent="알람"
+        description="설비 고장 알람을 확인합니다. 고장 유형과 영향 범위를 파악하고 정비를 배정합니다."
         nodeRef="SCR-ALM-002"
         status="MONITORING"
       />

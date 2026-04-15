@@ -71,6 +71,7 @@ export default function QualityCertPage() {
       <PageHeader
         title="품질"
         accent="성적서"
+        description="출하된 제품의 품질 성적서를 조회하고 발행합니다. 시험 결과와 KS/KORAIL 적합 여부를 확인할 수 있습니다."
         nodeRef="SCR-SHP-002"
         status="ONLINE"
       />

@@ -90,6 +90,7 @@ export default function P2LabelPage() {
         title="2공정 TG"
         accent="LOT 라벨"
         nodeRef="SCR-P2-005"
+        description="TG 공정에서 생산된 제품의 LOT 바코드 라벨을 검색하고 인쇄합니다."
       />
 
       {/* Search */}

@@ -97,6 +97,7 @@ export default function AssemblyAlarmPage() {
       <PageHeader
         title="조립 지시"
         accent="알림"
+        description="조립 작업지시 알림을 확인합니다. 제품, 수량, 납기 정보를 확인하고 수락/거절합니다."
         nodeRef="SCR-ALM-003"
         status="MONITORING"
       />

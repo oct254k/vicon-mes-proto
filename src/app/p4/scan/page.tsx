@@ -48,6 +48,7 @@ export default function P4ScanPage() {
         accent="투입 스캔"
         nodeRef="P4-SCN-001"
         status="SCANNING"
+        description="조립 공정에 투입할 부품들을 바코드 스캔하여 등록합니다. 필요한 부품이 모두 스캔되었는지 확인합니다."
       />
 
       {/* Assembly LOT Info */}

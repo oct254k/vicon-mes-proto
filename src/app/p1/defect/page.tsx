@@ -89,6 +89,7 @@ export default function P1DefectPage() {
         accent="등록"
         nodeRef="SCR-P1-005"
         status="ONLINE"
+        description="신선 공정에서 발생한 부적합 사항을 등록합니다. 불량유형, 수량, 사진을 첨부하여 기록합니다."
       />
 
       {/* Defect Registration Form */}

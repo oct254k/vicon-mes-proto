@@ -61,6 +61,7 @@ export default function AuditLogPage() {
       <PageHeader
         title="감사"
         accent="로그"
+        description="시스템 감사 로그를 조회합니다. 사용자별 액션, 변경 전후 값, 실적 취소/정정 이력을 추적합니다."
         nodeRef="SCR-COM-004"
         status="RECORDING"
       />

@@ -72,6 +72,7 @@ export default function P2ScanPage() {
         title="2공정 TG"
         accent="투입 스캔"
         nodeRef="SCR-P2-003"
+        description="TG 공정에 투입할 철선 LOT를 바코드 스캔하여 등록합니다. 설비를 선택하고 공정순서를 검증합니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

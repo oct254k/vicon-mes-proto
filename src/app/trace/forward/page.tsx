@@ -57,6 +57,7 @@ export default function ForwardTracePage() {
       <PageHeader
         title="순방향"
         accent="추적"
+        description="원자재 LOT로부터 어떤 제품이 생산되었는지 순방향으로 추적합니다."
         nodeRef="SCR-TRC-002"
         status="ONLINE"
       />

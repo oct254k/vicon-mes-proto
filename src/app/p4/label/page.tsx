@@ -30,6 +30,7 @@ export default function P4LabelPage() {
         accent="데크 LOT 라벨"
         nodeRef="P4-LBL-001"
         status="PRINTER READY"
+        description="조립 완료된 데크 제품의 LOT 바코드 라벨을 검색하고 인쇄합니다."
       />
 
       {/* Search */}

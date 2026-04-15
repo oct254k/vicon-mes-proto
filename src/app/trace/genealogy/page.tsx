@@ -155,6 +155,7 @@ export default function GenealogyPage() {
       <PageHeader
         title="LOT"
         accent="계보 조회"
+        description="LOT 번호를 입력하여 원자재부터 최종 제품까지의 계보(족보)를 트리 형태로 조회합니다."
         nodeRef="SCR-TRC-001"
         status="ONLINE"
       />

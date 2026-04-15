@@ -30,6 +30,7 @@ export default function P3LabelPage() {
         accent="LOT 라벨 인쇄"
         nodeRef="P3-LBL-001"
         status="PRINTER READY"
+        description="성형 공정에서 생산된 강판 LOT의 바코드 라벨을 검색하고 인쇄합니다."
       />
 
       {/* Search */}

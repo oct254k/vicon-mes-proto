@@ -67,6 +67,7 @@ export default function ProcessProgressPage() {
       <PageHeader
         title="공정"
         accent="진행현황"
+        description="전체 공정의 진행 현황을 조회합니다. 원자재부터 출하까지 각 단계별 완료율과 작업지시 진행률을 확인합니다."
         nodeRef="SCR-COM-003"
         status="LIVE"
       />

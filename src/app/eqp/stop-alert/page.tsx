@@ -111,6 +111,7 @@ export default function StopAlertPage() {
       <PageHeader
         title="정지"
         accent="알림"
+        description="설비 정지 알림을 확인합니다. 정지 유형, 경과시간, 담당팀 정보를 확인하고 조치를 취합니다."
         nodeRef="SCR-EQP-002"
         status="ALERT"
       />

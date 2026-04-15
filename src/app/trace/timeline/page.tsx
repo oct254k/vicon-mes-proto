@@ -137,6 +137,7 @@ export default function TimelinePage() {
       <PageHeader
         title="이력"
         accent="타임라인"
+        description="특정 LOT의 전체 이력을 시간순으로 조회합니다. 생성, 투입, 생산, 검사, 출하 등 모든 이벤트를 확인합니다."
         nodeRef="SCR-TRC-004"
         status="ONLINE"
       />

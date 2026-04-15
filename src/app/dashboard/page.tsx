@@ -72,6 +72,7 @@ export default function DashboardPage() {
         accent="대시보드"
         nodeRef="SCR-DSH-001"
         status="LIVE"
+        description="공장 전체의 실시간 생산 현황을 한눈에 확인할 수 있습니다. 금일 목표 대비 실적, 공정별 가동률, 설비 상태 및 알람을 모니터링합니다."
       />
 
       {/* Auto-refresh indicator */}

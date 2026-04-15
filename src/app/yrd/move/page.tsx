@@ -63,6 +63,7 @@ export default function SleeperMovePage() {
       <PageHeader
         title="침목"
         accent="이동"
+        description="야적장 내 슬리퍼의 위치를 이동합니다. 출발/도착 구역을 선택하고 이동 사유를 기록합니다."
         nodeRef="SCR-YRD-004"
         status="FIELD"
       />

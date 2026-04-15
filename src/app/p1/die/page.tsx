@@ -66,6 +66,7 @@ export default function P1DiePage() {
         accent="관리"
         nodeRef="SCR-P1-006"
         status="ONLINE"
+        description="신선 공정에 사용되는 다이(금형)의 마스터 데이터를 관리합니다. 사용횟수, 수명, 교체 이력을 추적합니다."
       />
 
       {/* Filters */}

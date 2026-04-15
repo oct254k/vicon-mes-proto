@@ -43,6 +43,7 @@ export default function P3ScanPage() {
         accent="투입 스캔"
         nodeRef="P3-SCN-001"
         status="ONLINE"
+        description="성형 공정에 투입할 자재 LOT를 바코드 스캔하여 등록합니다."
       />
 
       {/* Scan Input Section */}

@@ -57,6 +57,7 @@ export default function ShipProcessPage() {
       <PageHeader
         title="출하"
         accent="처리"
+        description="출하 처리를 수행합니다. 차량 정보를 입력하고 출하할 슬리퍼 LOT를 스캔하여 출하를 확정합니다."
         nodeRef="SCR-SHP-001"
         status="FIELD"
       />

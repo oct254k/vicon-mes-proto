@@ -75,6 +75,7 @@ export default function LoadStatusPage() {
       <PageHeader
         title="적재/출하"
         accent="현황"
+        description="야적장의 일별 적재/출하 현황을 조회합니다. 시간대별 물동량과 구역별 상태를 확인합니다."
         nodeRef="SCR-YRD-006"
         status="LIVE"
       />

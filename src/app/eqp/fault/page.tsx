@@ -80,6 +80,7 @@ export default function FaultEntryPage() {
       <PageHeader
         title="고장"
         accent="입력"
+        description="설비 고장 정보를 입력하고 재가동 절차를 수행합니다. 고장유형, 조치사항을 기록하고 점검항목을 확인합니다."
         nodeRef="SCR-EQP-003"
         status={submitted ? "고장 기록됨" : "준비"}
       />

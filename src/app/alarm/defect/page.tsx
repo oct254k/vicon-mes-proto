@@ -100,6 +100,7 @@ export default function DefectAlarmPage() {
       <PageHeader
         title="부적합"
         accent="알람"
+        description="부적합 발생 알람을 확인합니다. 심각도별로 필터링하고 확인/상위보고 조치를 취합니다."
         nodeRef="SCR-ALM-001"
         status="MONITORING"
       />

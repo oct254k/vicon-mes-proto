@@ -73,6 +73,7 @@ export default function YardInventoryPage() {
       <PageHeader
         title="야적장"
         accent="재고 현황"
+        description="야적장 전체 재고 현황을 조회합니다. 구역별, 제품종류별 재고량과 양생일수를 확인할 수 있습니다."
         nodeRef="SCR-YRD-005"
         status="ONLINE"
       />

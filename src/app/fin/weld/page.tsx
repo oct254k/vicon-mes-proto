@@ -62,6 +62,7 @@ export default function FinWeldPage() {
         accent="용접 완료 확인"
         nodeRef="FIN-WLD-001"
         status="INSPECTION"
+        description="마무리 공정에서 용접 포인트별 합격/불합격을 점검합니다. 전체 점검 완료 후 용접 완료를 확인합니다."
       />
 
       {/* LOT Scan */}

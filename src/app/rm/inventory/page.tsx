@@ -72,6 +72,7 @@ export default function RMInventoryPage() {
         accent="재고 현황"
         nodeRef="SCR-RM-003"
         status="CALIBRATED"
+        description="원자재 재고 현황을 종류, 규격, 상태별로 조회합니다. 엑셀 다운로드 및 인쇄 기능을 제공합니다."
       />
 
       {/* Filter Bar */}

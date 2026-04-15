@@ -57,6 +57,7 @@ export default function DashboardReportPage() {
         accent="리포트"
         nodeRef="SCR-DSH-002"
         status="CALIBRATED"
+        description="기간별 생산 실적을 조회하고 리포트를 생성합니다. 공정별 달성률과 생산 추이를 분석할 수 있습니다."
       />
 
       {/* Filters */}

@@ -121,6 +121,7 @@ export default function LocationViewPage() {
       <PageHeader
         title="위치"
         accent="조회"
+        description="야적장에 배치된 슬리퍼의 위치를 조회합니다. LOT 번호 또는 구역으로 검색할 수 있습니다."
         nodeRef="SCR-YRD-003"
         status="ONLINE"
       />

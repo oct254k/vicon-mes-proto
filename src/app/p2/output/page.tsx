@@ -84,6 +84,7 @@ export default function P2OutputPage() {
         title="2공정 TG"
         accent="생산량 집계"
         nodeRef="SCR-P2-002"
+        description="TG 공정의 설비별·시간대별 생산량을 집계합니다. 기간별 조회와 엑셀 내보내기가 가능합니다."
       />
 
       {/* Filters */}

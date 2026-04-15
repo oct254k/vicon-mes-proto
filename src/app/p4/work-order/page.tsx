@@ -58,6 +58,7 @@ export default function P4WorkOrderPage() {
         accent="외주 작업지시"
         nodeRef="P4-WOD-001"
         status="OFFICE"
+        description="외주 업체에 대한 조립 작업지시를 생성하고 관리합니다. 진행 상태와 납기를 추적합니다."
       />
 
       {/* Filter Bar */}

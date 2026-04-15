@@ -103,6 +103,7 @@ export default function P2TypeSettingPage() {
         title="2공정 TG"
         accent="타입 세팅"
         nodeRef="SCR-P2-006"
+        description="TG기의 타입 세팅(제품 규격) 변경을 기록합니다. 교체 소요시간을 추적하고 변경 이력을 관리합니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">

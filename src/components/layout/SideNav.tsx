@@ -171,7 +171,7 @@ export function SideNav() {
   return (
     <aside className="fixed left-0 top-16 h-[calc(100vh-64px)] flex flex-col z-40 bg-surface-container-lowest border-r border-surface-container-highest/10 w-72 overflow-hidden">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-outline-variant/15">
+      <Link href="/dashboard" className="block px-5 py-4 border-b border-outline-variant/15 hover:bg-surface-container-highest/20 transition-colors">
         <div className="flex items-center gap-3">
           <Image
             src="/vicon_logo.png"
@@ -186,7 +186,7 @@ export function SideNav() {
             데크 3공장
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* Scrollable Nav */}
       <nav className="flex-1 overflow-y-auto py-3 sidebar-scroll">
@@ -235,12 +235,6 @@ export function SideNav() {
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="px-4 py-3 bg-surface/50 border-t border-outline-variant/15">
-        <button className="w-full py-2.5 bg-error-container text-error font-headline font-black text-sm tracking-tight uppercase border border-error/20 hover:bg-error hover:text-on-error transition-colors">
-          긴급 정지
-        </button>
-      </div>
 
       {/* Custom scrollbar styles */}
       <style jsx>{`

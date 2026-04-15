@@ -3,16 +3,17 @@ interface PageHeaderProps {
   accent: string;
   nodeRef: string;
   status?: string;
+  description?: string;
 }
 
-export function PageHeader({ title, accent, nodeRef, status = "CALIBRATED" }: PageHeaderProps) {
+export function PageHeader({ title, accent, nodeRef, status = "CALIBRATED", description }: PageHeaderProps) {
   return (
     <header className="mb-10 relative">
       <div className="absolute -left-8 top-0 w-1 h-12 bg-primary-accent" />
       <h1 className="text-4xl md:text-5xl font-black tracking-tighter uppercase font-headline mb-2 leading-none">
         {title} <span className="text-primary-accent">{accent}</span>
       </h1>
-      <div className="flex items-center gap-4 flex-wrap">
+      <div className="flex items-center gap-4 flex-wrap mb-2">
         <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant bg-surface-container-high px-2 py-1">
           Node: {nodeRef}
         </span>
@@ -20,6 +21,11 @@ export function PageHeader({ title, accent, nodeRef, status = "CALIBRATED" }: Pa
           System Status: {status}
         </span>
       </div>
+      {description && (
+        <p className="text-sm text-on-surface-variant/80 font-body leading-relaxed max-w-3xl">
+          {description}
+        </p>
+      )}
     </header>
   );
 }

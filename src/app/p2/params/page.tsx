@@ -109,6 +109,7 @@ export default function P2ParamsPage() {
         title="2공정 TG"
         accent="파라미터"
         nodeRef="SCR-P2-008"
+        description="TG기의 공정 파라미터(온도, 압력, 속도, 장력 등)를 기록합니다. 규격 범위 이탈 시 자동 경고됩니다."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

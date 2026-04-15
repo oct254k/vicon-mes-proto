@@ -43,6 +43,7 @@ export default function P3ProductionPage() {
         accent="생산 실적"
         nodeRef="P3-PRD-001"
         status="RECORDING"
+        description="성형 공정의 생산 실적을 등록합니다. 강판 종류, 수량, 중량을 입력하고 실적 취소/정정이 가능합니다."
       />
 
       {/* Input Form */}

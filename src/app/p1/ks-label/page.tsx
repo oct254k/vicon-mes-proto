@@ -40,6 +40,7 @@ export default function P1KsLabelPage() {
         accent="인쇄"
         nodeRef="SCR-P1-004"
         status="ONLINE"
+        description="KS 인증 대상 철선의 KS 규격 라벨을 발행합니다. 인증 정보와 시험 결과가 포함됩니다."
       />
 
       {/* LOT Search */}

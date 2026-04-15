@@ -64,6 +64,7 @@ export default function EquipmentStatusPage() {
       <PageHeader
         title="설비"
         accent="현황"
+        description="전체 설비의 가동 현황을 조회합니다. 설비별 상태, 가동시간, 현재 생산 제품을 확인할 수 있습니다."
         nodeRef="SCR-EQP-001"
         status="ONLINE"
       />
