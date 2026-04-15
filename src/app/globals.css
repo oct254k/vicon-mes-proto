@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-variant: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #ddc0b9;
+  --color-on-background: #e5e2e1;
+  --color-background: #131313;
+  --color-primary: #ffb5a1;
+  --color-primary-accent: #C85A3C;
+  --color-primary-container: #e36e4f;
+  --color-primary-fixed: #ffdbd1;
+  --color-on-primary: #601300;
+  --color-on-primary-container: #551000;
+  --color-secondary: #fcb6a3;
+  --color-secondary-container: #6a392c;
+  --color-on-secondary: #4f2418;
+  --color-on-secondary-container: #e9a593;
+  --color-tertiary: #70d6da;
+  --color-tertiary-container: #319fa3;
+  --color-on-tertiary: #003738;
+  --color-on-tertiary-container: #002f31;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+  --color-outline: #a58b84;
+  --color-outline-variant: #57423d;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #a23e23;
+  --color-surface-tint: #ffb5a1;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  --radius-DEFAULT: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  --radius-2xl: 0rem;
+  --radius-3xl: 0rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0e0e0e; }
+::-webkit-scrollbar-thumb { background: #353534; }
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
 }
