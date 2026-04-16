@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { DataTable } from "@/components/ui/DataTable";
+import { YardBlueprintMap, ZoneOverlay } from "@/components/ui/YardBlueprintMap";
 
 interface ZoneData {
   id: string;
@@ -114,8 +115,6 @@ export default function LocationViewPage() {
 
   const highlightedIds = new Set(filteredZones.map((z) => z.id));
 
-  const rows = ["A", "B", "C"];
-
   return (
     <div>
       <PageHeader
@@ -189,52 +188,50 @@ export default function LocationViewPage() {
         </div>
 
         <div className="bg-surface-container-lowest p-6">
-          {rows.map((row) => (
-            <div key={row} className="grid grid-cols-6 gap-3 mb-3">
-              <div className="flex items-center justify-center font-label text-xs uppercase tracking-widest text-on-surface-variant opacity-60">
-                {row}
-              </div>
-              {ZONES.filter((z) => z.row === row).map((zone) => {
-                const isHighlighted = highlightedIds.has(zone.id);
-                const hasLoad = zone.currentLoad > 0;
-                return (
-                  <button
-                    key={zone.id}
-                    onClick={() => setSelectedZone(zone)}
-                    className={`p-3 border-l-2 transition-all text-left ${
-                      !isHighlighted && searchQuery
-                        ? "opacity-20 bg-surface-container border-outline-variant/10"
-                        : hasLoad
-                        ? zone.pct >= 100
-                          ? "bg-error/15 border-error"
-                          : zone.pct >= 70
-                          ? "bg-primary-accent/15 border-primary-accent"
-                          : "bg-tertiary/10 border-tertiary/50"
-                        : "bg-surface-container border-outline-variant/10"
-                    } ${selectedZone?.id === zone.id ? "ring-2 ring-tertiary" : ""}`}
-                  >
-                    <div className="flex justify-between items-start mb-1">
-                      <span className="font-headline text-sm font-black">{zone.id}</span>
-                      {hasLoad && (
-                        <span className="font-label text-[11px] tabular-nums text-on-surface-variant opacity-60">
-                          {zone.pct.toFixed(0)}%
-                        </span>
-                      )}
-                    </div>
-                    <div className="w-full h-1.5 bg-surface-container mb-1">
-                      <div
-                        className={`h-full ${zone.pct >= 100 ? "bg-error" : zone.pct >= 70 ? "bg-primary-accent" : "bg-tertiary"}`}
-                        style={{ width: `${Math.min(zone.pct, 100)}%` }}
-                      />
-                    </div>
-                    <div className="font-label text-[8px] text-on-surface-variant opacity-60 tabular-nums">
-                      {zone.currentLoad}/{zone.capacity}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          ))}
+          <YardBlueprintMap
+            zones={ZONES}
+            renderZone={(z) => {
+              const zone = z as ZoneData;
+              const isHighlighted = highlightedIds.has(zone.id);
+              const hasLoad = zone.currentLoad > 0;
+              return (
+                <ZoneOverlay
+                  key={zone.id}
+                  zoneId={zone.id}
+                  onClick={() => setSelectedZone(zone)}
+                  className={`p-2.5 min-w-[90px] border-l-2 backdrop-blur-sm transition-all ${
+                    !isHighlighted && searchQuery
+                      ? "opacity-20 bg-surface-container/80 border-outline-variant/10"
+                      : hasLoad
+                      ? zone.pct >= 100
+                        ? "bg-error/20 border-error"
+                        : zone.pct >= 70
+                        ? "bg-primary-accent/20 border-primary-accent"
+                        : "bg-tertiary/15 border-tertiary/50"
+                      : "bg-surface-container/60 border-outline-variant/10"
+                  } ${selectedZone?.id === zone.id ? "ring-2 ring-tertiary" : ""}`}
+                >
+                  <div className="flex justify-between items-start mb-1 gap-2">
+                    <span className="font-headline text-sm font-black">{zone.id}</span>
+                    {hasLoad && (
+                      <span className="font-label text-[10px] tabular-nums text-on-surface-variant opacity-80">
+                        {zone.pct.toFixed(0)}%
+                      </span>
+                    )}
+                  </div>
+                  <div className="w-full h-1.5 bg-surface-container/50 mb-1">
+                    <div
+                      className={`h-full ${zone.pct >= 100 ? "bg-error" : zone.pct >= 70 ? "bg-primary-accent" : "bg-tertiary"}`}
+                      style={{ width: `${Math.min(zone.pct, 100)}%` }}
+                    />
+                  </div>
+                  <div className="font-label text-[8px] text-on-surface-variant opacity-80 tabular-nums">
+                    {zone.currentLoad}/{zone.capacity}
+                  </div>
+                </ZoneOverlay>
+              );
+            }}
+          />
         </div>
       </section>
 

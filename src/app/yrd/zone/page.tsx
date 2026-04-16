@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { YardBlueprintMap, ZoneOverlay } from "@/components/ui/YardBlueprintMap";
 
 type ZoneStatus = "available" | "occupied" | "full" | "reserved" | "maintenance";
 
@@ -59,8 +60,6 @@ export default function YardZonePage() {
   const totalCapacity = ZONES.reduce((s, z) => s + z.capacity, 0);
   const totalLoad = ZONES.reduce((s, z) => s + z.currentLoad, 0);
   const utilization = ((totalLoad / totalCapacity) * 100).toFixed(1);
-
-  const rows = ["A", "B", "C"];
 
   return (
     <div>
@@ -119,51 +118,35 @@ export default function YardZonePage() {
         </div>
 
         <div className="bg-surface-container-lowest p-6">
-          {/* Column headers */}
-          <div className="grid grid-cols-6 gap-3 mb-2">
-            <div />
-            {[1, 2, 3, 4, 5].map((col) => (
-              <div key={col} className="text-center font-label text-xs uppercase tracking-widest text-on-surface-variant opacity-60">
-                열 {col}
-              </div>
-            ))}
-          </div>
-
-          {/* Zone grid */}
-          {rows.map((row) => (
-            <div key={row} className="grid grid-cols-6 gap-3 mb-3">
-              <div className="flex items-center justify-center font-label text-xs uppercase tracking-widest text-on-surface-variant opacity-60">
-                행 {row}
-              </div>
-              {ZONES.filter((z) => z.row === row).map((zone) => {
-                const pct = zone.capacity > 0 ? (zone.currentLoad / zone.capacity) * 100 : 0;
-                return (
-                  <button
-                    key={zone.id}
-                    onClick={() => setSelectedZone(zone)}
-                    className={`relative p-4 border-l-4 ${STATUS_COLORS[zone.status]} hover:opacity-80 transition-opacity text-left`}
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="font-headline text-lg font-black">{zone.id}</span>
-                      <StatusBadge {...STATUS_BADGE[zone.status]} />
-                    </div>
-                    <div className="font-label text-[11px] uppercase tracking-widest text-on-surface-variant opacity-60 mb-1">
-                      {zone.currentLoad}/{zone.capacity} EA
-                    </div>
-                    <div className="w-full h-2 bg-surface-container">
-                      <div
-                        className={`h-full ${pct >= 100 ? "bg-error" : pct >= 70 ? "bg-primary-accent" : "bg-tertiary"}`}
-                        style={{ width: `${Math.min(pct, 100)}%` }}
-                      />
-                    </div>
-                    <div className="mt-1 font-label text-[8px] text-on-surface-variant opacity-60 truncate">
-                      {zone.productType}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          ))}
+          <YardBlueprintMap
+            zones={ZONES}
+            renderZone={(z) => {
+              const zone = z as Zone;
+              const pct = zone.capacity > 0 ? (zone.currentLoad / zone.capacity) * 100 : 0;
+              return (
+                <ZoneOverlay
+                  key={zone.id}
+                  zoneId={zone.id}
+                  onClick={() => setSelectedZone(zone)}
+                  className={`p-3 min-w-[100px] border-l-4 backdrop-blur-sm ${STATUS_COLORS[zone.status]} ${selectedZone?.id === zone.id ? "ring-2 ring-tertiary" : ""}`}
+                >
+                  <div className="flex justify-between items-start mb-1 gap-2">
+                    <span className="font-headline text-sm font-black">{zone.id}</span>
+                    <StatusBadge {...STATUS_BADGE[zone.status]} />
+                  </div>
+                  <div className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant opacity-80 mb-1">
+                    {zone.currentLoad}/{zone.capacity} EA
+                  </div>
+                  <div className="w-full h-1.5 bg-surface-container/50">
+                    <div
+                      className={`h-full ${pct >= 100 ? "bg-error" : pct >= 70 ? "bg-primary-accent" : "bg-tertiary"}`}
+                      style={{ width: `${Math.min(pct, 100)}%` }}
+                    />
+                  </div>
+                </ZoneOverlay>
+              );
+            }}
+          />
 
           {/* Legend */}
           <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-outline-variant/10">
