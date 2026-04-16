@@ -28,10 +28,10 @@
   --color-tertiary-container: #319fa3;
   --color-on-tertiary: #003738;
   --color-on-tertiary-container: #002f31;
-  --color-error: #ffb4ab;
-  --color-error-container: #93000a;
-  --color-on-error: #690005;
-  --color-on-error-container: #ffdad6;
+  --color-error: #a8d8a8;
+  --color-error-container: #1a5c2a;
+  --color-on-error: #003300;
+  --color-on-error-container: #c8f7c8;
   --color-outline: #6b8f6b;
   --color-outline-variant: #2d4a2d;
   --color-inverse-surface: #e5e2e1;

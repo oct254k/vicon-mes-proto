@@ -230,7 +230,7 @@ export default function P2DefectPage() {
 
             <button
               type="submit"
-              className="w-full bg-error/20 text-error border border-error/30 px-4 py-3 font-label text-xs uppercase tracking-widest font-bold hover:bg-error/30 transition-colors"
+              className="w-full bg-primary-accent px-4 py-3 font-label text-xs uppercase tracking-widest font-bold text-on-primary-container hover:bg-primary-accent/80 transition-colors"
             >
               부적합 등록
             </button>
