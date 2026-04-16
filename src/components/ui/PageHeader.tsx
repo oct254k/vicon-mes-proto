@@ -22,7 +22,7 @@ export function PageHeader({ title, accent, nodeRef, status = "CALIBRATED", desc
         </span>
       </div>
       {description && (
-        <p className="text-base text-on-surface-variant/80 font-body leading-relaxed max-w-3xl">
+        <p className="text-lg text-on-surface-variant/80 font-body leading-relaxed max-w-3xl">
           {description}
         </p>
       )}
