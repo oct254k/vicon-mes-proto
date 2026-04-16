@@ -123,6 +123,7 @@ const menuItems = [
     label: "설비관리",
     icon: "engineering",
     href: "/eqp",
+    hidden: true as const,
     sub: [
       { label: "가동 현황", href: "/eqp/status" },
       { label: "정지 알림", href: "/eqp/stop-alert" },
@@ -190,7 +191,7 @@ export function SideNav() {
 
       {/* Scrollable Nav */}
       <nav className="flex-1 overflow-y-auto py-3 sidebar-scroll">
-        {menuItems.map((item) => {
+        {menuItems.filter(item => !("hidden" in item && item.hidden)).map((item) => {
           const isActive = pathname.startsWith(item.href);
           return (
             <div key={item.id} className="mb-1">
@@ -245,15 +246,15 @@ export function SideNav() {
           background: transparent;
         }
         .sidebar-scroll::-webkit-scrollbar-thumb {
-          background: rgba(200, 90, 60, 0.3);
+          background: rgba(0, 145, 47, 0.3);
           border-radius: 0;
         }
         .sidebar-scroll::-webkit-scrollbar-thumb:hover {
-          background: rgba(200, 90, 60, 0.6);
+          background: rgba(0, 145, 47, 0.6);
         }
         .sidebar-scroll {
           scrollbar-width: thin;
-          scrollbar-color: rgba(200, 90, 60, 0.3) transparent;
+          scrollbar-color: rgba(0, 145, 47, 0.3) transparent;
         }
       `}</style>
     </aside>

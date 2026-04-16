@@ -52,7 +52,7 @@ VICON MES는 "데크 3공장"을 위한 제조실행시스템(Manufacturing Exec
 | `--color-surface-container-highest` | `#353534` | 최상위 컨테이너, 테이블 헤더 |
 | `--color-surface-container-lowest` | `#0e0e0e` | 최하위 컨테이너, SideNav 배경, 입력 필드 배경 |
 | `--color-surface-variant` | `#353534` | 변형 서피스 |
-| `--color-surface-tint` | `#ffb5a1` | 서피스 틴트 (primary와 동일) |
+| `--color-surface-tint` | `#90EE90` | 서피스 틴트 (primary와 동일) |
 | `--color-background` | `#131313` | 전체 배경 |
 
 ### On-Surface 계열 (텍스트/아이콘)
@@ -60,28 +60,28 @@ VICON MES는 "데크 3공장"을 위한 제조실행시스템(Manufacturing Exec
 | 변수명 | HEX | 용도 |
 |--------|-----|------|
 | `--color-on-surface` | `#e5e2e1` | 기본 텍스트 색상 |
-| `--color-on-surface-variant` | `#ddc0b9` | 보조 텍스트, 라벨 |
+| `--color-on-surface-variant` | `#b0c4b0` | 보조 텍스트, 라벨 |
 | `--color-on-background` | `#e5e2e1` | 배경 위 텍스트 |
 
-### Primary 계열 (주 강조색 — 벽돌빛 레드/오렌지)
+### Primary 계열 (주 강조색 — 그린)
 
 | 변수명 | HEX | 용도 |
 |--------|-----|------|
-| `--color-primary` | `#ffb5a1` | 기본 프라이머리 (밝은 톤) |
-| `--color-primary-accent` | `#C85A3C` | **핵심 액센트** — 활성 메뉴, 버튼, border-l-4, 인디케이터 |
-| `--color-primary-container` | `#e36e4f` | 프라이머리 컨테이너, FieldHeader 텍스트 |
-| `--color-primary-fixed` | `#ffdbd1` | 고정 프라이머리 (라이트용) |
-| `--color-on-primary` | `#601300` | 프라이머리 위 텍스트 |
-| `--color-on-primary-container` | `#551000` | 프라이머리 컨테이너 위 텍스트 |
+| `--color-primary` | `#90EE90` | 기본 프라이머리 (밝은 톤) |
+| `--color-primary-accent` | `#00912F` | **핵심 액센트** — 활성 메뉴, 버튼, border-l-4, 인디케이터 |
+| `--color-primary-container` | `#00912F` | 프라이머리 컨테이너, FieldHeader 텍스트 |
+| `--color-primary-fixed` | `#c8f7c8` | 고정 프라이머리 (라이트용) |
+| `--color-on-primary` | `#003300` | 프라이머리 위 텍스트 |
+| `--color-on-primary-container` | `#002800` | 프라이머리 컨테이너 위 텍스트 |
 
-### Secondary 계열
+### Secondary 계열 (연한 초록 — primary 보조)
 
 | 변수명 | HEX | 용도 |
 |--------|-----|------|
-| `--color-secondary` | `#fcb6a3` | 세컨더리 |
-| `--color-secondary-container` | `#6a392c` | 세컨더리 컨테이너 |
-| `--color-on-secondary` | `#4f2418` | 세컨더리 위 텍스트 |
-| `--color-on-secondary-container` | `#e9a593` | 세컨더리 컨테이너 위 텍스트 |
+| `--color-secondary` | `#a8d8a8` | 세컨더리 (연한 초록) |
+| `--color-secondary-container` | `#1a5c2a` | 세컨더리 컨테이너 (어두운 초록) |
+| `--color-on-secondary` | `#0a3a14` | 세컨더리 위 텍스트 (어두운 초록) |
+| `--color-on-secondary-container` | `#b5e0b5` | 세컨더리 컨테이너 위 텍스트 (밝은 초록) |
 
 ### Tertiary 계열 (시안/민트 — 가동 상태)
 
@@ -105,11 +105,11 @@ VICON MES는 "데크 3공장"을 위한 제조실행시스템(Manufacturing Exec
 
 | 변수명 | HEX | 용도 |
 |--------|-----|------|
-| `--color-outline` | `#a58b84` | 아웃라인 |
-| `--color-outline-variant` | `#57423d` | 고스트 보더 (`/5`, `/10`, `/15` opacity로 사용) |
+| `--color-outline` | `#6b8f6b` | 아웃라인 (중립 초록 톤) |
+| `--color-outline-variant` | `#2d4a2d` | 고스트 보더 (`/5`, `/10`, `/15` opacity로 사용, 어두운 초록 톤) |
 | `--color-inverse-surface` | `#e5e2e1` | 반전 서피스 |
 | `--color-inverse-on-surface` | `#313030` | 반전 텍스트 |
-| `--color-inverse-primary` | `#a23e23` | 반전 프라이머리 |
+| `--color-inverse-primary` | `#006b1f` | 반전 프라이머리 (초록) |
 
 ---
 
@@ -211,7 +211,7 @@ VICON MES는 "데크 3공장"을 위한 제조실행시스템(Manufacturing Exec
 
 - **위치**: `fixed bottom-0`
 - **구성**:
-  - 좌측 → 우측 전체: `h-1 bg-primary-container` (#e36e4f) 1px 컬러 스트립
+  - 좌측 → 우측 전체: `h-1 bg-primary-container` (#00912F) 1px 컬러 스트립
   - 우측 상태 표시: `bg-surface-container-highest`, `font-label text-xs uppercase tracking-widest text-primary-accent font-bold`
   - 표시 내용: `System Active | Port 8080 | Secure Link`
 
@@ -320,7 +320,7 @@ interface StatusBadgeProps {
 
 | 유형 | 배경 | 텍스트 | 보더 | 비고 |
 |------|------|--------|------|------|
-| Primary | `bg-primary-accent` (#C85A3C) | `text-white` | 없음 | 주요 액션 |
+| Primary | `bg-primary-accent` (#00912F) | `text-white` | 없음 | 주요 액션 |
 | Secondary (Ghost) | 투명 | `text-on-surface` | 없음 | opacity hover 전환 |
 | Error / 긴급 | `bg-error-container` (#93000a) | `text-error` (#ffb4ab) | `border border-error/20` | 긴급 정지, 삭제 등 |
 | Error Hover | `bg-error` | `text-on-error` | — | hover 시 전환 |
@@ -354,7 +354,7 @@ interface StatusBadgeProps {
 
 - **너비**: 4px (전역), 3px (사이드바)
 - **트랙**: `#0e0e0e` (전역), 투명 (사이드바)
-- **썸**: `#353534` (전역), `rgba(200, 90, 60, 0.3)` (사이드바, primary-accent 계열)
+- **썸**: `#353534` (전역), `rgba(0, 145, 47, 0.3)` (사이드바, primary-accent 계열)
 
 ---
 
