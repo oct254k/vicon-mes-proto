@@ -4,7 +4,7 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { YardBlueprintMap, ZoneOverlay } from "@/components/ui/YardBlueprintMap";
+import { YardBlueprintMap, ZoneOverlay, DraggableZoneOverlay } from "@/components/ui/YardBlueprintMap";
 
 type ZoneStatus = "available" | "occupied" | "full" | "reserved" | "maintenance";
 
@@ -120,6 +120,7 @@ export default function YardZonePage() {
         <div className="bg-surface-container-lowest p-6">
           <YardBlueprintMap
             zones={ZONES}
+            draggable
             renderZone={(z) => {
               const zone = z as Zone;
               const pct = zone.capacity > 0 ? (zone.currentLoad / zone.capacity) * 100 : 0;
@@ -144,6 +145,35 @@ export default function YardZonePage() {
                     />
                   </div>
                 </ZoneOverlay>
+              );
+            }}
+            renderDraggableZone={(z, pos, containerRef, onDragEnd) => {
+              const zone = z as Zone;
+              const pct = zone.capacity > 0 ? (zone.currentLoad / zone.capacity) * 100 : 0;
+              return (
+                <DraggableZoneOverlay
+                  key={zone.id}
+                  zoneId={zone.id}
+                  position={pos}
+                  containerRef={containerRef}
+                  onDragEnd={onDragEnd}
+                  onClick={() => setSelectedZone(zone)}
+                  className={`p-3 min-w-[100px] border-l-4 backdrop-blur-sm ${STATUS_COLORS[zone.status]} ${selectedZone?.id === zone.id ? "ring-2 ring-tertiary" : ""}`}
+                >
+                  <div className="flex justify-between items-start mb-1 gap-2">
+                    <span className="font-headline text-sm font-black">{zone.id}</span>
+                    <StatusBadge {...STATUS_BADGE[zone.status]} />
+                  </div>
+                  <div className="font-label text-[10px] uppercase tracking-widest text-on-surface-variant opacity-80 mb-1">
+                    {zone.currentLoad}/{zone.capacity} EA
+                  </div>
+                  <div className="w-full h-1.5 bg-surface-container/50">
+                    <div
+                      className={`h-full ${pct >= 100 ? "bg-error" : pct >= 70 ? "bg-primary-accent" : "bg-tertiary"}`}
+                      style={{ width: `${Math.min(pct, 100)}%` }}
+                    />
+                  </div>
+                </DraggableZoneOverlay>
               );
             }}
           />
